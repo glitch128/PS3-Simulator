@@ -1,0 +1,180 @@
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  background-color: ;
+  font-family: "PS3-rodin", sans-serif;
+	cursor: none;
+}
+
+.clock {
+	position: absolute;
+	right: 124px;
+	top: 71px;
+	font-size: 20.5px;
+	text-align: right;
+	user-select: none;
+	font-family: "PS3-rodin";
+	text-shadow: 3px 3px 6px #2e2e2e;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.top {
+  position: absolute;
+  top: 59px;
+  right: -2px;
+	font-size: 21px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 4px 0 0 4px;
+	border-color: #a8a8a8;
+	width: 467px;
+	height: 43px;
+	font-family: "rodin", sans-serif;
+	text-align: center;
+	cursor: none;
+	display: block;
+	box-shadow: 	inset 0px 0px 0px 0px yellow,
+                inset 0px 0px 0px 0px green,
+                inset 0px 0px 0px 0px blue,
+                inset 0px 0px 5px .7px #b0b0b0;
+	background:  #7e7e7e;
+	border-right: transparent;
+}
+#xmb-contain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+	cursor: none;
+}
+#xmb {
+  width: 100px;
+  position: absolute;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 200px;
+  margin-right: 100px;
+  user-select: none;
+	display: box;
+	top: 144px;
+	left: 509px;
+}
+#xmb > ul {
+  display: flex;
+  flex: 1 1 auto;
+  position: absolute;
+  top: 10%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+	cursor: none;
+}
+#xmb li,
+#xmb ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+}
+#xmb li.column > ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#xmb .cell {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin: 10px;
+  opacity: 0.4;
+  position: absolute;
+  transition: all 0.3s;
+  cursor: none;
+}
+#xmb .cell.active {
+  opacity: 1;
+	
+}
+#xmb .column:not(.active) .cell.submenu:not(.active) {
+  display: none;
+  opacity: 0;
+}
+#xmb .column {
+  transition: all 0.3s;
+  flex: 0 1 auto;
+  margin: 0 0;
+}
+#xmb .column.active {
+  flex: 1 1 auto;
+}
+.xmb-icon {
+  text-align: center;
+  width: 100%;
+  font-size: 100px;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+#xmb label {
+  display: block;
+  text-align: left;
+  text-shadow: 0px 0px 0px #ffffff;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: none;
+	width: 500px;
+}
+#xmb .cell.submenu,
+#xmb .cell.submenu > * {
+  line-height: 100px;
+}
+#xmb .submenu label:not(.subtitle) {
+  position: absolute;
+  top: 0;
+  line-height: 50px;
+  margin-left: 100px;
+  font-size: 30px;
+}
+#xmb .submenu label.subtitle {
+  position: absolute;
+  top: 557px;
+  margin-left: 0;
+  font-size: 19px;
+  line-height: 0;
+	height: 50px;
+}
+a {
+  color: inherit;
+  cursor: none;
+}
+
+.material-icons.xmb-icon {
+	font-size: 100px;
+}
+
+#xmb .cell > label {
+	text-align: center;
+	width: 100px;
+	font-size: 18px;
+	cursor: none;
+}
